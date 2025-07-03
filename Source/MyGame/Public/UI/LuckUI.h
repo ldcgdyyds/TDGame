@@ -6,8 +6,8 @@
 #include "Blueprint/UserWidget.h"
 #include "LuckUI.generated.h"
 
-class UMainUI;
-class ULevelUI;
+class UMainPanel;
+class USelectPanel;
 class UGameUI;
 
 /**
@@ -26,9 +26,9 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 		void BackToMain();
 	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
-		UMainUI* LuckMainUI;
+		UMainPanel* LuckMainUI;
 	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
-		ULevelUI* LuckLevelUI;
+		USelectPanel* LuckLevelUI;
 	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
 		UGameUI* LuckGameUI;
 };

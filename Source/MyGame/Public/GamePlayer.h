@@ -9,7 +9,7 @@
 
 class UWidgetComponent;
 class UGameUI;
-class UMainUI;
+class UMainPanel;
 class UEventCenter;
 class UCardPool;
 class ACard;
@@ -33,7 +33,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="UI")
 		UGameUI* GameUI;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="UI")
-		UMainUI* MainUI;
+		UMainPanel* MainUI;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="EventCenter")
 		UEventCenter* EventCenter;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="CardPool")

@@ -5,13 +5,13 @@
 #include "CoreMinimal.h"
 #include "Components/Button.h"
 #include "Blueprint/UserWidget.h"
-#include "MainUI.generated.h"
+#include "MainPanel.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class MYGAME_API UMainUI : public UUserWidget
+class MYGAME_API UMainPanel : public UUserWidget
 {
 	GENERATED_BODY()
 

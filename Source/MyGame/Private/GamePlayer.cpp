@@ -4,7 +4,7 @@
 #include "Card.h"
 #include "Ability.h"
 #include "UI/GameUI.h"
-#include "UI/MainUI.h"
+#include "UI/MainPanel.h"
 #include "UI/CardUI.h"
 #include "EventCenter.h"
 #include "CardPool.h"
@@ -53,8 +53,8 @@ void AGamePlayer::BeginPlay()
 	CardPool=GetWorld()->GetGameInstance()->GetSubsystem<UCardPool>();
 	CardDataTable=LoadObject<UDataTable>(this, TEXT("/Script/Engine.DataTable'/Game/Data/DTCard.DTCard'"));
 	CardNames=CardDataTable->GetRowNames();
-	TSubclassOf<UMainUI> WidgetClass=LoadClass<UUserWidget>(nullptr,TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/UI/WB_LuckMain.WB_LuckMain_C'"));
-	MainUI=(UMainUI*)CreateWidget(GetWorld(), WidgetClass);
+	TSubclassOf<UMainPanel> WidgetClass=LoadClass<UUserWidget>(nullptr,TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/UI/WB_LuckMain.WB_LuckMain_C'"));
+	MainUI=(UMainPanel*)CreateWidget(GetWorld(), WidgetClass);
 	Widget->SetWidget(MainUI);
 	/*StartUI->HeroBtn1->OnClicked.AddDynamic(this, &AGamePlayer::StartGame);
 	StartUI->HeroBtn2->OnClicked.AddDynamic(this, &AGamePlayer::StartGame);

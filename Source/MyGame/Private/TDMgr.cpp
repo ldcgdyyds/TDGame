@@ -3,6 +3,9 @@
 
 #include "TDMgr.h"
 
+#include "UI/MainPanel.h"
+#include "UI/TDPanel.h"
+
 // Sets default values
 ATDMgr::ATDMgr()
 {
@@ -15,11 +18,14 @@ ATDMgr::ATDMgr()
 void ATDMgr::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	TSubclassOf<UTDPanel> WidgetClass=LoadClass<UUserWidget>(nullptr,TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/UI/BP_TD.BP_TD_C'"));
+	TDPanel=(UTDPanel*)CreateWidget(GetWorld(), WidgetClass);
+	TDPanel->AddToViewport();
+	TDPanel->MainPanel->BtnStart->OnClicked.AddDynamic(this, &ATDMgr::StartGame);
 }
 
 void ATDMgr::StartGame()
 {
-	
+	TDPanel->StartGame();
 }
 

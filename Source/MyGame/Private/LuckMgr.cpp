@@ -3,8 +3,8 @@
 #include "LuckMgr.h"
 #include "LuckData.h"
 #include "UI/LuckUI.h"
-#include "UI/MainUI.h"
-#include "UI/LevelUI.h"
+#include "UI/MainPanel.h"
+#include "UI/SelectPanel.h"
 #include "UI/GameUI.h"
 
 // Sets default values

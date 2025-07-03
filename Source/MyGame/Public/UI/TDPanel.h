@@ -3,23 +3,22 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/Button.h"
 #include "Blueprint/UserWidget.h"
-#include "LevelUI.generated.h"
+#include "TDPanel.generated.h"
+
+class UMainPanel;
 
 /**
  * 
  */
 UCLASS()
-class MYGAME_API ULevelUI : public UUserWidget
+class MYGAME_API UTDPanel : public UUserWidget
 {
 	GENERATED_BODY()
 
 public:
 	UFUNCTION(BlueprintImplementableEvent)
-		void InitLevel();
-	UPROPERTY(meta=(BindWidget))
-		UButton* BtnBack;
-	UPROPERTY(meta=(BindWidget))
-		UButton* BtnStart;
+		void StartGame();
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
+		UMainPanel* MainPanel;
 };

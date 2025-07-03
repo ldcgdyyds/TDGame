@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "TDMgr.generated.h"
 
+class UTDPanel;
+
 UCLASS()
 class MYGAME_API ATDMgr : public AActor
 {
@@ -19,7 +21,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="UI")
+		UTDPanel* TDPanel;
 	UFUNCTION(BlueprintCallable)
 		void StartGame();
 
