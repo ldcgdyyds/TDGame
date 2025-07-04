@@ -4,6 +4,7 @@
 #include "TDMgr.h"
 
 #include "UI/MainPanel.h"
+#include "UI/SelectPanel.h"
 #include "UI/TDPanel.h"
 
 // Sets default values
@@ -22,6 +23,8 @@ void ATDMgr::BeginPlay()
 	TDPanel=(UTDPanel*)CreateWidget(GetWorld(), WidgetClass);
 	TDPanel->AddToViewport();
 	TDPanel->MainPanel->BtnStart->OnClicked.AddDynamic(this, &ATDMgr::StartGame);
+	TDPanel->MainPanel->BtnQuit->OnClicked.AddDynamic(this, &ATDMgr::QuitGame);
+	TDPanel->SelectPanel->BtnBack->OnClicked.AddDynamic(this, &ATDMgr::BackToMain);
 }
 
 void ATDMgr::StartGame()
@@ -29,3 +32,12 @@ void ATDMgr::StartGame()
 	TDPanel->StartGame();
 }
 
+void ATDMgr::BackToMain()
+{
+	TDPanel->BackToMain();	
+}
+
+void ATDMgr::QuitGame()
+{
+	TDPanel->QuitGame();
+}

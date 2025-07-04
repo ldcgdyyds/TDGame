@@ -16,10 +16,6 @@ class MYGAME_API USelectPanel : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintImplementableEvent)
-		void InitLevel();
 	UPROPERTY(meta=(BindWidget))
 		UButton* BtnBack;
-	UPROPERTY(meta=(BindWidget))
-		UButton* BtnStart;
 };

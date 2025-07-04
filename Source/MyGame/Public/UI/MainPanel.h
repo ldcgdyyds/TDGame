@@ -17,5 +17,7 @@ class MYGAME_API UMainPanel : public UUserWidget
 
 public:
 	UPROPERTY(meta=(BindWidget))
-		UButton* BtnStart; 
+		UButton* BtnStart;
+	UPROPERTY(meta=(BindWidget))
+	    UButton* BtnQuit;
 };

@@ -7,6 +7,7 @@
 #include "TDPanel.generated.h"
 
 class UMainPanel;
+class USelectPanel;
 
 /**
  * 
@@ -19,6 +20,12 @@ class MYGAME_API UTDPanel : public UUserWidget
 public:
 	UFUNCTION(BlueprintImplementableEvent)
 		void StartGame();
+	UFUNCTION(BlueprintImplementableEvent)
+		void BackToMain();
+	UFUNCTION(BlueprintImplementableEvent)
+		void QuitGame();
 	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
 		UMainPanel* MainPanel;
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
+		USelectPanel* SelectPanel;
 };

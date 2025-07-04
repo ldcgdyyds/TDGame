@@ -7,7 +7,6 @@
 #include "LuckMgr.generated.h"
 
 class UDataTable;
-class ULuckUI;
 
 UCLASS()
 class MYGAME_API ALuckMgr : public AActor
@@ -25,15 +24,5 @@ protected:
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="DataTable")
 		UDataTable* LuckCardDataTable;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="UI")
-		ULuckUI* LuckUI;
 	TArray<FName> LuckCardNames;
-	UFUNCTION(BlueprintCallable)
-		void SelectLevel();
-	UFUNCTION(BlueprintCallable)
-		void StartGame();
-	UFUNCTION(BlueprintCallable)
-		void BackToMain();
-	UFUNCTION(BlueprintCallable)
-		void ConfirmInfo();
 };

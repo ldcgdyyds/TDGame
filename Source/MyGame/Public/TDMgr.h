@@ -26,5 +26,8 @@ public:
 		UTDPanel* TDPanel;
 	UFUNCTION(BlueprintCallable)
 		void StartGame();
-
+	UFUNCTION(BlueprintCallable)
+		void BackToMain();
+	UFUNCTION(BlueprintCallable)
+		void QuitGame();
 };
